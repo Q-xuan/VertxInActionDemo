@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.py'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.3')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation('io.vertx:vertx-core:4.5.9')
+}
+
+application{
+    mainClass = "firstapp.VertxEcho"
+}
+
+test {
+    useJUnitPlatform()
+}
